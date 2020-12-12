@@ -1,6 +1,6 @@
-package observer;
+package self.observer;
 
-import subject.ISubject;
+import self.subject.ISubject;
 
 public class HeatIndex implements IObserver {
     private float heatIndex;

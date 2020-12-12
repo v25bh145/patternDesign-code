@@ -1,6 +1,6 @@
-package subject;
+package self.subject;
 
-import observer.IObserver;
+import self.observer.IObserver;
 
 public interface ISubject {
     public void registerObserver(IObserver o);

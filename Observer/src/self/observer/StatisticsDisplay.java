@@ -1,4 +1,4 @@
-package observer;
+package self.observer;
 
 public class StatisticsDisplay {
 }

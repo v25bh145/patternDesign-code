@@ -1,7 +1,7 @@
-package subject;
+package self.subject;
 
 import java.util.ArrayList;
-import observer.IObserver;
+import self.observer.IObserver;
 
 public class WeatherData implements ISubject {
     //主题类需要维护一个观察者数组，类型为抽象接口类，这里实现了松耦合

@@ -1,7 +1,9 @@
-import observer.CurrentConditionsDisplay;
-import observer.ForecastDisplay;
-import observer.HeatIndex;
-import subject.WeatherData;
+package self;
+
+import self.observer.CurrentConditionsDisplay;
+import self.observer.ForecastDisplay;
+import self.observer.HeatIndex;
+import self.subject.WeatherData;
 
 public class WeatherStation {
     //测试程序
