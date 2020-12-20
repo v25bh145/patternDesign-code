@@ -1,15 +1,15 @@
-package Model;
+package IteratorPatten.Model;
 
-import Iterator.PancakeHouseIterator;
-
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
-public class PancakeHouseMenu implements Menu {
-    ArrayList<MenuItem> menuItems;
+public class DinerMenu implements Menu {
+    static final int MAX_ITEMS = 6;
+    int numberOfItems = 0;
+    MenuItem[] menuItems;
 
-    public PancakeHouseMenu() {
-        menuItems = new ArrayList<>();
+    public DinerMenu() {
+        menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("K&B's Pancake Breakfast", "Pancakes with scrambled eggs, add toast", true, 2.99);
 
@@ -22,18 +22,22 @@ public class PancakeHouseMenu implements Menu {
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-        menuItems.add(menuItem);
+        if(numberOfItems >= MAX_ITEMS) System.err.println("Sorry, menu is full! Can't add item to menu");
+        else {
+            menuItems[numberOfItems] = menuItem;
+            numberOfItems++;
+        }
     }
 
     //实现了迭代器之后就不需要将内部的对象开放了
-//    public ArrayList<MenuItem> getMenuItems() {
+//    public MenuItem[] getMenuItems() {
 //        return menuItems;
 //    }
 
     //迭代器与模型类之间以组合形式联系
     @Override
     public Iterator<MenuItem> createIterator() {
-        //这里使用的接口是扩展JAVA迭代器接口的类([可以理解成适配器])
-        return new PancakeHouseIterator(menuItems);
+        //JAVA自带的迭代器(接口差不多，remove如果不想实现可以抛出[OperationNotSupportedException]异常
+        return Arrays.stream(menuItems).iterator();
     }
 }

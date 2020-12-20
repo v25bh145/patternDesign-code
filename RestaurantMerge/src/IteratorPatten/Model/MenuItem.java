@@ -1,4 +1,4 @@
-package Model;
+package IteratorPatten.Model;
 
 public class MenuItem {
     private String name;

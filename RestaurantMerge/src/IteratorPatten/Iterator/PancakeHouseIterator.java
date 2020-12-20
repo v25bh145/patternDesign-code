@@ -1,6 +1,6 @@
-package Iterator;
+package IteratorPatten.Iterator;
 
-import Model.MenuItem;
+import IteratorPatten.Model.MenuItem;
 
 import java.util.ArrayList;
 import java.util.Iterator;

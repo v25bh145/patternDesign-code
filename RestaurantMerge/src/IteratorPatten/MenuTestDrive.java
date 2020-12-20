@@ -1,4 +1,7 @@
-import Model.*;
+package IteratorPatten;
+
+import IteratorPatten.Model.*;
+import IteratorPatten.Waitress;
 
 import java.util.ArrayList;
 

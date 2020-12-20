@@ -1,4 +1,7 @@
-package Model;
+package IteratorPatten;
+
+import IteratorPatten.Model.Menu;
+import IteratorPatten.Model.MenuItem;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,10 +22,10 @@ public class Waitress {
 //    }
 
 //    public void printMenu() {
-//        Iterator pancakeIterator = (Iterator) pancakeHouseMenu.createIterator(true);
-//        Iterator dinerIterator = (Iterator) dinerMenu.createIterator(true);
-////        java.util.Iterator dinerIterator2 = (java.util.Iterator)dinerMenu.createIterator(true);
-//        java.util.Iterator cafeMenuIterator = (java.util.Iterator) cafeMenu.createIterator(false);
+//        IteratorPatten.Iterator.Iterator pancakeIterator = (IteratorPatten.Iterator.Iterator) pancakeHouseMenu.createIterator(true);
+//        IteratorPatten.Iterator.Iterator dinerIterator = (IteratorPatten.Iterator.Iterator) dinerMenu.createIterator(true);
+////        java.util.IteratorPatten.Iterator.Iterator dinerIterator2 = (java.util.IteratorPatten.Iterator.Iterator)dinerMenu.createIterator(true);
+//        java.util.IteratorPatten.Iterator.Iterator cafeMenuIterator = (java.util.IteratorPatten.Iterator.Iterator) cafeMenu.createIterator(false);
 //
 //
 //        System.out.println("MENU\n----\nBREAKFAST");

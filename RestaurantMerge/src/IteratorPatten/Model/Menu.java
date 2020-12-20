@@ -1,4 +1,4 @@
-package Model;
+package IteratorPatten.Model;
 
 import java.util.Iterator;
 
