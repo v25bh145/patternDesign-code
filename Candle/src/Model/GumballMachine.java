@@ -6,6 +6,7 @@ import java.util.Random;
 
 //糖果抽奖机类
 //我们亦可以在此处进行状态的转换，但是这样会导致重构时很麻烦
+//我也还可以对多个gumballMachine对象共用一个静态状态
 public class GumballMachine {
     State soldOutState;
     State noQuarterState;
@@ -35,6 +36,8 @@ public class GumballMachine {
     }
     public void turnCrank() {
         state.turnCrank();
+        //TODO: dispense方法在没有投硬币转动曲柄时也会被调用
+        //调整 1. 让turnCrank增加一个布尔返回值 2. 引入异常
         state.dispense();
     }
 
@@ -74,4 +77,6 @@ public class GumballMachine {
     public int getCount() {
         return count;
     }
+
+    public void refillCount(int num) { count += num; }
 }

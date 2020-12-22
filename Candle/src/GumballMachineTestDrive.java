@@ -2,7 +2,7 @@ import Model.GumballMachine;
 
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(5);
+        GumballMachine gumballMachine = new GumballMachine(1);
 
         System.out.println(gumballMachine);
 
@@ -10,6 +10,8 @@ public class GumballMachineTestDrive {
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
+
+        gumballMachine.refillCount(1);
 
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
