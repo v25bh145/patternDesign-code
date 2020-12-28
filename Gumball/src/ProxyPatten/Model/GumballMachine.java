@@ -1,8 +1,6 @@
-package Model;
+package ProxyPatten.Model;
 
-import State.*;
-
-import java.util.Random;
+import ProxyPatten.State.*;
 
 //糖果抽奖机类
 //我们亦可以在此处进行状态的转换，但是这样会导致重构时很麻烦
@@ -14,10 +12,12 @@ public class GumballMachine {
     State soldState;
     State winnerState;
 
+    String location;
+
     State state;
     int count = 0;
 
-    public GumballMachine(int numberGumballs) {
+    public GumballMachine(String location, int numberGumballs) {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
@@ -26,6 +26,8 @@ public class GumballMachine {
         this.count = numberGumballs;
         if(numberGumballs > 0) state = noQuarterState;
         else state = soldOutState;
+
+        this.location = location;
     }
 
     public void insertQuarter() {
@@ -78,5 +80,11 @@ public class GumballMachine {
         return count;
     }
 
-    public void refillCount(int num) { count += num; }
+    public void refillCount(int num) {
+        count += num;
+    }
+
+    public String getLocation() {
+        return location;
+    }
 }

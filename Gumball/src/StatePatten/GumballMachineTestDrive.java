@@ -1,4 +1,6 @@
-import Model.GumballMachine;
+package StatePatten;
+
+import StatePatten.Model.GumballMachine;
 
 public class GumballMachineTestDrive {
     public static void main(String[] args) {

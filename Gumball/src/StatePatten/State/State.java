@@ -1,4 +1,4 @@
-package State;
+package StatePatten.State;
 
 //状态接口以及四个行为
 //我们将糖果抽奖机的状态转换算法(状态行为)提出来放到这里，在糖果抽奖机内添加一系列状态的getter与setter

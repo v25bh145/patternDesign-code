@@ -1,6 +1,6 @@
-package State;
+package ProxyPatten.State;
 
-import Model.GumballMachine;
+import ProxyPatten.Model.GumballMachine;
 
 public class SoldOutState implements State {
     GumballMachine gumballMachine;

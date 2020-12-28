@@ -1,6 +1,6 @@
-package State;
+package StatePatten.State;
 
-import Model.GumballMachine;
+import StatePatten.Model.GumballMachine;
 
 public class WinnerState implements State {
     GumballMachine gumballMachine;
